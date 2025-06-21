@@ -1,0 +1,53 @@
+MODULOS:
+- login (inicio de sesion de usuario y recuperacion de contraseña)
+- Usuario (creacion por defecto, modificacion, mas)
+- Estudiantes (creacion, edicion, listado, mas)
+- Asistencias (solo registro de entrada y salida, no tardanzas ni faltas)
+- Reportes (filtrar asistencias y descarga de PDF)
+- Dashboard (visualizacion de graficos interactivos)
+
+- users (name, email, password)
+
+semestres
+2024-1
+2024-1
+2024-1
+2024-1
+
+semestre elegido
+2024-1
+
+
+DB:	control_asistencias_gym_unam_basico
+
+CREAR MIGRACIONES:
+php artisan make:migration create_estudiantes_table
+php artisan make:migration create_asistencias_table
+php artisan make:migration create_semestres_table
+php artisan make:migration create_semestre_elegido_table
+
+
+CREAR MODELOS:
+php artisan make:model Estudiante
+php artisan make:model Asistencia
+php artisan make:model Semestre
+php artisan make:model SemestreElegido
+
+
+CREAR SEEDERS:
+php artisan make:seeder SemestreSeeder
+
+
+EJECUTAR:
+php artisan migrate --seed
+php artisan db:seed --class=DatabaseSeeder
+
+
+CREAR COMPONENTES:
+php artisan make:livewire Users/UserTable
+php artisan make:livewire Users/UserForm
+
+php artisan make:livewire Estudiantes/UserTable
+php artisan make:livewire Asistencias/UserTable
+php artisan make:livewire Semestres/Table
+php artisan make:livewire Elegido/Table
