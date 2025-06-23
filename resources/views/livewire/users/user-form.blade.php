@@ -27,7 +27,7 @@
                         <label class="block text-sm">Rol</label>
                         <select wire:model.defer="rol" class="w-full p-2 border rounded">
                             <option value="0">Usuario</option>
-                            <option value="1">Administrador</option>
+                            {{-- <option value="1">Administrador</option> --}}
                         </select>
                         @error('rol') <span class="text-sm text-red-600">{{ $message }}</span> @enderror
                     </div>

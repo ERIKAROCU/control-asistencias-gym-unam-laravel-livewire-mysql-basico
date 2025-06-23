@@ -25,6 +25,7 @@ php artisan make:migration create_estudiantes_table
 php artisan make:migration create_asistencias_table
 php artisan make:migration create_semestres_table
 php artisan make:migration create_semestre_elegido_table
+php artisan make:migration create_movimientos_asistencia_table
 
 
 CREAR MODELOS:
@@ -32,6 +33,7 @@ php artisan make:model Estudiante
 php artisan make:model Asistencia
 php artisan make:model Semestre
 php artisan make:model SemestreElegido
+php artisan make:model MovimientoAsistencia
 
 
 CREAR SEEDERS:
@@ -47,7 +49,26 @@ CREAR COMPONENTES:
 php artisan make:livewire Users/UserTable
 php artisan make:livewire Users/UserForm
 
-php artisan make:livewire Estudiantes/UserTable
-php artisan make:livewire Asistencias/UserTable
+php artisan make:livewire Asistencias/AsistenciasRegistro
+
+
+
+php artisan make:livewire Asistencias/AsistenciasTable
+
+php artisan make:livewire Estudiantes/EstudiantesTable
+
 php artisan make:livewire Semestres/Table
 php artisan make:livewire Elegido/Table
+
+
+
+SUBIR A GITHUB:
+git remote add origin https://github.com/ERIKAROCU/control-asistencias-gym-unam-laravel-livewire-mysql-basico.git
+
+git add .
+git commit -m "Modulo usuarios"
+
+git branch -M main
+git push -u origin main
+
+

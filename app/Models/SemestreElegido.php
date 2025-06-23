@@ -9,6 +9,8 @@ class SemestreElegido extends Model
 {
     use HasFactory;
 
+    protected $table = 'semestre_elegido';
+
     protected $fillable = [
         'semestre_elegido',
     ];
