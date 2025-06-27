@@ -98,7 +98,6 @@ class UserForm extends Component
         
         session()->flash('message', $message);
         $this->dispatch('swal', title: $message, icon: 'success');
-
         $this->modalVisible = false;
         $this->dispatch('refreshTable');
     }

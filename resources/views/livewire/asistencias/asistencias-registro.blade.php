@@ -23,7 +23,7 @@
                 type="password"
                 id="entrada"
                 wire:model="entrada"
-                class="mt-1 block w-full border-gray-300 rounded-md shadow-sm"
+                class="mt-1 block w-full border-gray-300 text-black rounded-md shadow-sm"
                 required
                 placeholder="Ingrese DNI o Código"
                 autocomplete="off"

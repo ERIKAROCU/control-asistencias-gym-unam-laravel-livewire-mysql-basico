@@ -18,18 +18,18 @@
             <!-- Empleados -->
             <li>
                 <a href="{{ route('users.user-table') }}" class="flex items-center space-x-3 p-3 rounded-lg hover:bg-blue-800 transition">
-                    <i class="fas fa-user"></i> <span>Empleados</span>
+                    <i class="fas fa-user"></i> <span>Usuarios</span>
                 </a>
             </li>
 
             <li>
-                <a href="{{ route('users.user-table') }}" class="flex items-center space-x-3 p-3 rounded-lg hover:bg-blue-800 transition">
+                <a href="{{ route('asistencias.asistencias-lista') }}" class="flex items-center space-x-3 p-3 rounded-lg hover:bg-blue-800 transition">
                     <i class="fas fa-file-signature"></i> <span>Listas de asistencias</span>
                 </a>
             </li>
             <li>
-                <a href="{{ route('users.user-table') }}" class="flex items-center space-x-3 p-3 rounded-lg hover:bg-blue-800 transition">
-                    <i class="fas fa-file"></i> <span>Ver todas las asistencias</span>
+                <a href="{{ route('estudiantes.estudiantes-lista') }}" class="flex items-center space-x-3 p-3 rounded-lg hover:bg-blue-800 transition">
+                    <i class="fas fa-user-graduate"></i> <span>Estudiantes</span>
                 </a>
             </li>
 

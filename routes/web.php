@@ -21,8 +21,10 @@ Route::middleware('web')->group(function () {
 use App\Livewire\Users\UserTable;
 Route::get('/table', UserTable::class)->name('users.user-table');
 
+use App\Livewire\Asistencias\AsistenciasLista;
+Route::get('/asistencias', AsistenciasLista::class)->name('asistencias.asistencias-lista');
 
-
-
+use App\Livewire\Estudiantes\EstudiantesLista;
+Route::get('/estudiantes', EstudiantesLista::class)->name('estudiantes.estudiantes-lista');
 
 require __DIR__.'/auth.php';

@@ -16,5 +16,7 @@ describe users;
 INSERT INTO semestre_elegido (semestre_elegido) VALUES ("2025-2");
 INSERT INTO estudiantes (codigo_estudiante, dni, nombre, apellido, email, escuela_profesional, ciclo) 
 VALUES (2021204073,75864498,"Erik","Ramos Arocutipa","erik@gmail.com","EPISI",8);
+INSERT INTO estudiantes (codigo_estudiante, dni, nombre, apellido, email, escuela_profesional, ciclo) 
+VALUES (2021204114,70116858,"Mia","Flores Vizcarra","mia@gmail.com","EPISI",8);
 
 

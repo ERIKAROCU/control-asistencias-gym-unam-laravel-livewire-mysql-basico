@@ -8,14 +8,9 @@ MODULOS:
 
 - users (name, email, password)
 
-semestres
-2024-1
-2024-1
-2024-1
-2024-1
-
-semestre elegido
-2024-1
+MODULOS REALIZADOS
+- Inicio de Sesion
+- Registro
 
 
 DB:	control_asistencias_gym_unam_basico
@@ -26,6 +21,7 @@ php artisan make:migration create_asistencias_table
 php artisan make:migration create_semestres_table
 php artisan make:migration create_semestre_elegido_table
 php artisan make:migration create_movimientos_asistencia_table
+php artisan make:migration create_escuelas_table
 
 
 CREAR MODELOS:
@@ -38,6 +34,7 @@ php artisan make:model MovimientoAsistencia
 
 CREAR SEEDERS:
 php artisan make:seeder SemestreSeeder
+php artisan make:seeder EscuelaSeeder
 
 
 EJECUTAR:
@@ -50,12 +47,10 @@ php artisan make:livewire Users/UserTable
 php artisan make:livewire Users/UserForm
 
 php artisan make:livewire Asistencias/AsistenciasRegistro
+php artisan make:livewire Asistencias/AsistenciasLista
 
-
-
-php artisan make:livewire Asistencias/AsistenciasTable
-
-php artisan make:livewire Estudiantes/EstudiantesTable
+php artisan make:livewire Estudiantes/EstudiantesLista
+php artisan make:livewire Estudiantes/EstudiantesForm
 
 php artisan make:livewire Semestres/Table
 php artisan make:livewire Elegido/Table
