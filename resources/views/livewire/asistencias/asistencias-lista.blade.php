@@ -1,6 +1,6 @@
 <div class="container mx-auto p-4 bg-gray-50 rounded-lg shadow-md">
     <div>
-        <h1 class="text-2xl font-bold text-center text-gray-800 mb-4">Listas de Asistencias</h1>
+        <h1 class="text-2xl font-bold text-center text-gray-800 mb-4">Lista de Asistencias</h1>
     </div>
 
     <div class="mb-4 flex justify-between items-center">
