@@ -14,12 +14,12 @@
     <div wire:key="usuarios-table">
         <table class="w-full border-collapse border border-gray-300">
             <thead>
-                <tr class="bg-gray-200">
-                    <th class="py-2 px-4 border-b text-center text-sm font-medium text-gray-900">Estudiante</th>
-                    <th class="py-2 px-4 border-b text-center text-sm font-medium text-gray-900">Código</th>
-                    <th class="py-2 px-4 border-b text-center text-sm font-medium text-gray-900">Tipo</th>
-                    <th class="py-2 px-4 border-b text-center text-sm font-medium text-gray-900">Fecha y Hora</th>
-                    <th class="py-2 px-4 border-b text-center text-sm font-medium text-gray-900">Semestre</th>
+                <tr class="bg-blue-600 text-white">
+                    <th class="py-2 px-4 border-b text-center text-sm font-medium">Estudiante</th>
+                    <th class="py-2 px-4 border-b text-center text-sm font-medium">Código</th>
+                    <th class="py-2 px-4 border-b text-center text-sm font-medium">Tipo</th>
+                    <th class="py-2 px-4 border-b text-center text-sm font-medium">Fecha y Hora</th>
+                    <th class="py-2 px-4 border-b text-center text-sm font-medium">Semestre</th>
                 </tr>
             </thead>
             <tbody>

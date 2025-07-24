@@ -43,13 +43,13 @@
     <div wire:key="usuarios-table">
         <table class="w-full border-collapse border border-gray-300">
             <thead>
-                <tr class="bg-gray-200">
-                    <th class="py-2 px-4 border-b text-center text-sm font-medium text-gray-900">ID</th>
-                    <th class="py-2 px-4 border-b text-center text-sm font-medium text-gray-900">Nombres</th>
-                    <th class="py-2 px-4 border-b text-center text-sm font-medium text-gray-900">Email</th>
-                    <th class="py-2 px-4 border-b text-center text-sm font-medium text-gray-900">Rol</th>
-                    <th class="py-2 px-4 border-b text-center text-sm font-medium text-gray-900">Estado</th>
-                    <th class="py-2 px-4 border-b text-center text-sm font-medium text-gray-900">Acciones</th>
+                <tr class="bg-blue-600 text-white">
+                    <th class="py-2 px-4 border-b text-center text-sm font-medium">ID</th>
+                    <th class="py-2 px-4 border-b text-center text-sm font-medium">Nombres</th>
+                    <th class="py-2 px-4 border-b text-center text-sm font-medium">Email</th>
+                    <th class="py-2 px-4 border-b text-center text-sm font-medium">Rol</th>
+                    <th class="py-2 px-4 border-b text-center text-sm font-medium">Estado</th>
+                    <th class="py-2 px-4 border-b text-center text-sm font-medium">Acciones</th>
                 </tr>
             </thead>
             <tbody> 

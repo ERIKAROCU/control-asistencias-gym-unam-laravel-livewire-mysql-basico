@@ -18,6 +18,12 @@ class MovimientoAsistencia extends Model
         'semestre_academico',
     ];
 
+    // app/Models/MovimientoAsistencia.php
+
+    protected $casts = [
+        'fecha_hora' => 'datetime',
+    ];
+
     public function estudiante()
     {
         return $this->belongsTo(Estudiante::class);

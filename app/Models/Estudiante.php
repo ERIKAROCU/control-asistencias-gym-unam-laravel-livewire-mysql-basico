@@ -23,4 +23,10 @@ class Estudiante extends Model
     {
         return $this->hasMany(Asistencia::class);
     }
+
+    public function movimientos()
+    {
+        return $this->hasMany(MovimientoAsistencia::class);
+    }
+
 }

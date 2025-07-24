@@ -30,6 +30,7 @@ php artisan make:model Asistencia
 php artisan make:model Semestre
 php artisan make:model SemestreElegido
 php artisan make:model MovimientoAsistencia
+php artisan make:model Escuela
 
 
 CREAR SEEDERS:
@@ -41,6 +42,10 @@ EJECUTAR:
 php artisan migrate --seed
 php artisan db:seed --class=DatabaseSeeder
 
+PARA SOLO TABLAS Y SEEDERS ESPECIFICOS:
+php artisan migrate
+php artisan db:seed --class=EscuelaSeeder
+
 
 CREAR COMPONENTES:
 php artisan make:livewire Users/UserTable
@@ -51,6 +56,8 @@ php artisan make:livewire Asistencias/AsistenciasLista
 
 php artisan make:livewire Estudiantes/EstudiantesLista
 php artisan make:livewire Estudiantes/EstudiantesForm
+
+php artisan make:livewire Asistencias/ReportesAsistencias
 
 php artisan make:livewire Semestres/Table
 php artisan make:livewire Elegido/Table
@@ -65,5 +72,19 @@ git commit -m "Modulo usuarios"
 
 git branch -M main
 git push -u origin main
+
+
+
+ADMIN ADMIN
+======================
+semestres academicos
+usuarios con acceso
+escuelas profesionales
+
+
+
+
+
+
 
 

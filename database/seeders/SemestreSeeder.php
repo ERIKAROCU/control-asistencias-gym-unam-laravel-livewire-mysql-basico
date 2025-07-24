@@ -17,6 +17,9 @@ class SemestreSeeder extends Seeder
             ['semestre' => '2024-1'],
             ['semestre' => '2024-2'],
             ['semestre' => '2025-1'],
+            ['semestre' => '2025-2'],
+            ['semestre' => '2026-1'],
+            ['semestre' => '2026-2'],
         ]);
     }
 }

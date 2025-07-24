@@ -40,8 +40,14 @@
 
                     <div>
                         <label class="block text-sm">Escuela Profesional</label>
-                        <input type="text" wire:model.defer="escuela_profesional" class="w-full p-2 border rounded" />
-                        @error('escuela_profesional') <span class="text-sm text-red-600">{{ $message }}</span> @enderror
+                        <select
+                            wire:model.defer="escuela_profesional"
+                            class="w-full p-2 border rounded"
+                        >
+                            @foreach($escuelas as $escuela)
+                                <option value="{{ $escuela }}">{{ $escuela }}</option>
+                            @endforeach
+                        </select>
                     </div>
 
                     <div>

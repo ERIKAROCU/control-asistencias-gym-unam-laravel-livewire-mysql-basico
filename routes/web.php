@@ -5,9 +5,8 @@ use App\Livewire\Actions\Logout;
 
 Route::view('/', 'welcome');
 
-Route::view('dashboard', 'dashboard')
-    ->middleware(['auth', 'verified'])
-    ->name('dashboard');
+use App\Http\Controllers\DashboardController;
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
 Route::view('profile', 'profile')
     ->middleware(['auth'])
@@ -26,5 +25,9 @@ Route::get('/asistencias', AsistenciasLista::class)->name('asistencias.asistenci
 
 use App\Livewire\Estudiantes\EstudiantesLista;
 Route::get('/estudiantes', EstudiantesLista::class)->name('estudiantes.estudiantes-lista');
+
+use App\Livewire\Reportes\ReportesAsistencias;
+Route::get('/reportes', ReportesAsistencias::class)->name('reportes.reportes-asistencias');
+
 
 require __DIR__.'/auth.php';

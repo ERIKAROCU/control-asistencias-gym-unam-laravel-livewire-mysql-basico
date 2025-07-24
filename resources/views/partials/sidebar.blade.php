@@ -33,6 +33,12 @@
                 </a>
             </li>
 
+            <li>
+                <a href="{{ route('reportes.reportes-asistencias') }}" class="flex items-center space-x-3 p-3 rounded-lg hover:bg-blue-800 transition">
+                    <i class="fas fa-chart-bar"></i> <span>Reportes</span>
+                </a>
+            </li>
+
             <!-- Menú Desplegable: Asistencias -->
             {{-- <li x-data="{ open: false }">
                 <button @click="open = !open" class="flex items-center justify-between w-full p-3 rounded-lg hover:bg-blue-800 transition">

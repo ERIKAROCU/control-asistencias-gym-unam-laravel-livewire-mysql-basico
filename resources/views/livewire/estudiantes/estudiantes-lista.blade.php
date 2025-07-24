@@ -21,14 +21,15 @@
             class="w-1/2 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
 
-        {{-- <select
-            wire:model.live="isActive"
+        <select
+            wire:model.live="perEscuela"
             class="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
-            <option value="">Todos</option>
-            <option value="1">Activos</option>
-            <option value="0">Inactivos</option>
-        </select> --}}
+            <option value="">Todas las escuelas</option>
+            @foreach($escuelas as $escuela)
+                <option value="{{ $escuela }}">{{ $escuela }}</option>
+            @endforeach
+        </select>
 
         <select
             wire:model.live="perPage"
@@ -43,16 +44,16 @@
     <div wire:key="estudiantes-table">
         <table class="w-full border-collapse border border-gray-300">
             <thead>
-                <tr class="bg-gray-200">
-                    <th class="py-2 px-4 border-b text-center text-sm font-medium text-gray-900">ID</th>
-                    <th class="py-2 px-4 border-b text-center text-sm font-medium text-gray-900">Codigo</th>
-                    <th class="py-2 px-4 border-b text-center text-sm font-medium text-gray-900">DNI</th>
-                    <th class="py-2 px-4 border-b text-center text-sm font-medium text-gray-900">Nombres</th>
-                    <th class="py-2 px-4 border-b text-center text-sm font-medium text-gray-900">Apellidos</th>
-                    <th class="py-2 px-4 border-b text-center text-sm font-medium text-gray-900">Email</th>
-                    <th class="py-2 px-4 border-b text-center text-sm font-medium text-gray-900">Escuela</th>
-                    <th class="py-2 px-4 border-b text-center text-sm font-medium text-gray-900">Ciclo</th>
-                    <th class="py-2 px-4 border-b text-center text-sm font-medium text-gray-900">Acciones</th>
+                <tr class="bg-blue-600 text-white">
+                    <th class="py-2 px-4 border-b text-center text-sm font-medium">ID</th>
+                    <th class="py-2 px-4 border-b text-center text-sm font-medium">Codigo</th>
+                    <th class="py-2 px-4 border-b text-center text-sm font-medium">DNI</th>
+                    <th class="py-2 px-4 border-b text-center text-sm font-medium">Nombres</th>
+                    <th class="py-2 px-4 border-b text-center text-sm font-medium">Apellidos</th>
+                    <th class="py-2 px-4 border-b text-center text-sm font-medium">Email</th>
+                    <th class="py-2 px-4 border-b text-center text-sm font-medium">Escuela</th>
+                    <th class="py-2 px-4 border-b text-center text-sm font-medium">Ciclo</th>
+                    <th class="py-2 px-4 border-b text-center text-sm font-medium">Acciones</th>
                 </tr>
             </thead>
             <tbody> 

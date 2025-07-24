@@ -4,15 +4,17 @@ namespace App\Livewire\Estudiantes;
 
 use Livewire\Component;
 use App\Models\Estudiante;
+use App\Models\Escuela;
 use Livewire\WithPagination;
 
 class EstudiantesLista extends Component
 {
     use WithPagination;
 
-    public $search = ''; // Búsqueda general
-    public $perPage = 10; // Número de usuarios por página
-    public $isActive = ''; // Filtro de estado (activos/inactivos)
+    public $search = '';
+    public $perPage = 10;
+    public $perEscuela = ''; // Mantenemos este nombre
+    public $isActive = '';
 
     protected $listeners = ['refreshTable' => '$refresh', 'deleteRow' => 'deleteRow'];
 
@@ -28,12 +30,22 @@ class EstudiantesLista extends Component
                     ->orWhere('escuela_profesional', 'like', '%' . $this->search . '%')
                     ->orWhere('ciclo', 'like', '%' . $this->search . '%');
             })
-            /* ->when($this->isActive !== '', function ($query) {
-                $query->where('is_active', $this->isActive);
-            }) */
+            ->when($this->perEscuela, function ($query) {
+                $query->where('escuela_profesional', $this->perEscuela);
+            })
             ->orderBy('id', 'desc')
             ->paginate($this->perPage);
 
-        return view('livewire.estudiantes.estudiantes-lista', compact('estudiantes'))->layout('layouts.app');
+        // Obtenemos las escuelas únicas que existen en los estudiantes
+        $escuelas = Escuela::select('escuela')
+                    ->distinct()
+                    ->orderBy('escuela')
+                    ->get()
+                    ->pluck('escuela');
+
+        return view('livewire.estudiantes.estudiantes-lista', [
+            'estudiantes' => $estudiantes,
+            'escuelas' => $escuelas
+        ])->layout('layouts.app');
     }
 }
